@@ -61,6 +61,7 @@ def predictImage(request):
     # CHANGE VALUE HERE
     n = 170
     th, threshed = cv2.threshold(gray, n, 255, cv2.THRESH_TRUNC)
+    pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
     t1 = pytesseract.image_to_data(threshed, output_type='data.frame')
     pd.set_option('max_columns', None)
     t2 = pytesseract.image_to_string(threshed)
