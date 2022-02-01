@@ -5,7 +5,7 @@ import os
 
 # Create your views here.
 
-
+import tesseract
 import pytesseract
 #import ftfy
 #import easyocr
