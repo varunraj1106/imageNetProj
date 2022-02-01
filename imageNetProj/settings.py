@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'xmniserswybtse',
         'PASSWORD': 'ce8a86a767776a218d87312c9ab1b7a1d25fbd68475260c71494a6de6af6f235',
         'HOST': 'ec2-3-224-157-224.compute-1.amazonaws.com',
-        'NAME' : 'd1pd70020bo54k'
+        'NAME' : 'd1pd70020bo54k',
         'PORT': '5432',
     }
 }
