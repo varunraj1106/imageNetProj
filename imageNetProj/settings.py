@@ -79,15 +79,16 @@ WSGI_APPLICATION = 'imageNetProj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':str(os.path.join(BASE_DIR, 'db.sqlite3'))
+        ##'NAME':str(os.path.join(BASE_DIR, 'db.sqlite3'))
         #'USER': 'USERNAME_FROM_HEROKU',
         #'PASSWORD': 'PASSWORD_FROM_HEROKU',
         #'HOST': 'HOST_FROM_HEROKU'
         #'NAME': '',
-        #'USER': '',
-        #'PASSWORD': '',
-        #'HOST': '',
-        #'PORT': '5432',
+        'USER': 'xmniserswybtse',
+        'PASSWORD': 'ce8a86a767776a218d87312c9ab1b7a1d25fbd68475260c71494a6de6af6f235',
+        'HOST': 'ec2-3-224-157-224.compute-1.amazonaws.com',
+        'NAME' : 'd1pd70020bo54k'
+        'PORT': '5432',
     }
 }
 
@@ -138,7 +139,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-#DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
