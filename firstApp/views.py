@@ -56,7 +56,7 @@ def predictImage(request):
     testimage='.'+filePathName
     print(testimage)
 
-    img = cv2.imread(fs)
+    img = cv2.imread(testimage)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # CHANGE VALUE HERE
     n = 170
