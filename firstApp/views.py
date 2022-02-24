@@ -69,7 +69,8 @@ def predictImage(request):
     lines = text.groupby('block_num')['text']
     conf = text.groupby(['block_num'])['conf'].mean()
     
-    pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
+    #pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
+    pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     text = pytesseract.image_to_string(img)
     t2 = text 
     
