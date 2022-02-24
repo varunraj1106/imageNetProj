@@ -66,8 +66,8 @@ def predictImage(request):
     #pd.set_option('max_columns', None)
     #t2 = pytesseract.image_to_string(threshed)
     #text = t1[t1.conf != -1]
-    lines = text.groupby('block_num')['text']
-    conf = text.groupby(['block_num'])['conf'].mean()
+    #lines = text.groupby('block_num')['text']
+    #conf = text.groupby(['block_num'])['conf'].mean()
     
     #pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
     pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
