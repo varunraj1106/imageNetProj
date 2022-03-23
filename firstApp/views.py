@@ -72,10 +72,10 @@ def predictImage(request):
     #pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
     pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     text = 'abc'
-    text = str(text)
+    #text = str(text)
     text = pytesseract.image_to_string(img)
     t2 = text 
-    
+    t2 = str(t2)
     
     
     
