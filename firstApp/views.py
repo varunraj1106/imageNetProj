@@ -16,7 +16,7 @@ import numpy as np
 import sys
 import re
 import os
-#from PIL import Image
+from PIL import Image
 #import ftfy
 import io
 #from datetime import datetime
