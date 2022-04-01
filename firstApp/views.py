@@ -60,20 +60,20 @@ def predictImage(request):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # CHANGE VALUE HERE
     n = 170
-    #th, threshed = cv2.threshold(gray, n, 255, cv2.THRESH_TRUNC)
+    th, threshed = cv2.threshold(gray, n, 255, cv2.THRESH_TRUNC)
     #pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
-    #t1 = pytesseract.image_to_data(threshed, output_type='data.frame')
-    #pd.set_option('max_columns', None)
-    #t2 = pytesseract.image_to_string(threshed)
-    #text = t1[t1.conf != -1]
-    #lines = text.groupby('block_num')['text']
-    #conf = text.groupby(['block_num'])['conf'].mean()
+    t1 = pytesseract.image_to_data(threshed, output_type='data.frame')
+    pd.set_option('max_columns', None)
+    t2 = pytesseract.image_to_string(threshed)
+    text = t1[t1.conf != -1]
+    lines = text.groupby('block_num')['text']
+    conf = text.groupby(['block_num'])['conf'].mean()
     
     #pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
-    pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+    #pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     #text = 'abc'
     #text = str(text)
-    text = pytesseract.image_to_string(img)
+    #text = pytesseract.image_to_string(img)
     t2 = text 
     t2 = str(t2)
     
